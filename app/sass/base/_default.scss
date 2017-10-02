@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #000000;
+}
+
+h1,
+h2,
+h3 {
+    color: #ffffff;
+    font-family: $title-font;
+}
+
+h1 {
+    font-size: 48px
+}
+
+h2 {
+    font-size: 24px;
+    padding-bottom: 35px;
+    border-bottom: 10px solid $main-color;
+}
+
+p {
+    color: #ffffff;
+    font-size: 18px;
+}
+
+form {
+    input{
+        background-color: #000;
+        font-size: 20px;
+    }
+    textarea {
+        background-color: #000;
+        font-size: 20px;        
+        resize: none;
+    }
+}

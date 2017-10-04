@@ -1,0 +1,28 @@
+.menu {
+    background-color: #fff;
+
+    nav {
+        float: right;
+        padding: 2.2% 0px;
+    }
+
+    li {
+        margin-right: 20px;
+    }
+
+    a {
+        color: #000;
+        font-size: 15px;
+        padding: 5% 0;
+    }
+
+    a:hover {
+        color: $main-color;
+    }
+
+    .logo {
+        background-color: $main-color;
+        height: 75px;
+        width: 205px;
+    }
+}

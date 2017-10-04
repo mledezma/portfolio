@@ -1,0 +1,17 @@
+.about {
+    background-image: url('../img/intro_landscape.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-height: 570px;
+    padding: $main-space 0;
+}
+
+.about-info {    
+    box-sizing: border-box;
+    border-radius: 50%;
+    background-color: rgba(26, 160, 167, 0.35);
+    height: 412px;
+    padding: 5% 3%;
+    margin: 0 auto;
+    width: 412px;
+}

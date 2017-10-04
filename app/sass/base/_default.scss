@@ -12,6 +12,7 @@ h2,
 h3 {
     color: #ffffff;
     font-family: $title-font;
+    margin-bottom: 45px;
 }
 
 h1 {
@@ -20,7 +21,7 @@ h1 {
 
 h2 {
     font-size: 24px;
-    padding-bottom: 35px;
+    padding-bottom: 15px;
     border-bottom: 10px solid $main-color;
 }
 
@@ -39,4 +40,18 @@ form {
         font-size: 20px;        
         resize: none;
     }
+}
+
+li {
+    display: inline;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+a,
+p {
+    font-family: $content-font;
 }

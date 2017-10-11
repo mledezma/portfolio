@@ -8,11 +8,14 @@ body {
 }
 
 h1,
-h2,
-h3 {
+h2 {
     color: #ffffff;
     font-family: $title-font;
-    margin-bottom: 45px;
+}
+
+h3 {
+    color: #ffffff;
+    font-family: $content-font;
 }
 
 h1 {
@@ -20,9 +23,38 @@ h1 {
 }
 
 h2 {
-    font-size: 24px;
+    font-size: 32px;
+    margin-bottom: $main-space*2;
     padding-bottom: 15px;
-    border-bottom: 10px solid $main-color;
+    text-align: center;
+
+    span {
+        border-bottom: 10px solid $main-color;
+        padding-bottom: $main-space/2;
+        position: relative;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: -7px;
+            width: 14.5px;
+            height: 10px;
+            border-radius: 50%;
+            background: $main-color;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            right: -7px;
+            width: 14.5px;
+            height: 10px;
+            border-radius: 50%;
+            background: $main-color;
+        }
+    }
 }
 
 p {
@@ -31,12 +63,15 @@ p {
 }
 
 form {
-    input{
+
+    input {
         background-color: #000;
+        color: #fff;
         font-size: 20px;
     }
     textarea {
         background-color: #000;
+        color: #fff;
         font-size: 20px;        
         resize: none;
     }

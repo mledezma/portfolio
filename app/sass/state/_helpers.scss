@@ -2,10 +2,37 @@
 .clearfix:after {
   content: "";
   display: table;
-} 
+}
+
 .clearfix:after {
   clear: both;
 }
+
 .clearfix {
-  zoom: 1; /* For IE 6/7 (trigger hasLayout) */
+  zoom: 1;
+  /* For IE 6/7 (trigger hasLayout) */
+}
+
+.rounded-border {
+  position: relative;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: -7px;
+    width: 14.5px;
+    height: 10px;
+    border-radius: 50%;
+    background: $main-color;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    right: -7px;
+    width: 14.5px;
+    height: 10px;
+    border-radius: 50%;
+    background: $main-color;
+  }
 }

@@ -6,3 +6,10 @@
 .full-container {
     width: 100%;
 }
+
+.flex-layout {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: flex-end;
+}

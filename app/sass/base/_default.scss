@@ -1,92 +1,95 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    background-color: #000000;
+  background-color: #000000;
 }
 
 h1,
 h2 {
-    color: #ffffff;
-    font-family: $title-font;
+  color: #ffffff;
+  font-family: $title-font;
 }
 
 h3 {
-    color: #ffffff;
-    font-family: $content-font;
+  border-bottom: 10px solid $main-color;
+  color: $main-color;
+  font-family: $content-font;
+  padding-bottom: 20px;
+  span {
+    border: 1px solid $main-color;
+    margin: 0 25px;
+  }
 }
 
 h1 {
-    font-size: 48px
+  font-size: 48px
 }
 
 h2 {
-    font-size: 32px;
-    margin-bottom: $main-space*2;
-    padding-bottom: 15px;
-    text-align: center;
-
-    span {
-        border-bottom: 10px solid $main-color;
-        padding-bottom: $main-space/2;
-        position: relative;
-
-        &:before {
-            content: '';
-            position: absolute;
-            top: 100%;
-            left: -7px;
-            width: 14.5px;
-            height: 10px;
-            border-radius: 50%;
-            background: $main-color;
-        }
-
-        &:after {
-            content: '';
-            position: absolute;
-            top: 100%;
-            right: -7px;
-            width: 14.5px;
-            height: 10px;
-            border-radius: 50%;
-            background: $main-color;
-        }
+  font-size: 32px;
+  margin-bottom: $main-space*2;
+  padding-bottom: 15px;
+  text-align: center;
+  span {
+    border-bottom: 10px solid $main-color;
+    padding-bottom: $main-space/2;
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: -7px;
+      width: 14.5px;
+      height: 10px;
+      border-radius: 50%;
+      background: $main-color;
     }
+    &:after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      right: -7px;
+      width: 14.5px;
+      height: 10px;
+      border-radius: 50%;
+      background: $main-color;
+    }
+  }
 }
 
 p {
-    color: #ffffff;
-    font-size: 18px;
+  color: #ffffff;
+  font-size: 18px;
 }
 
 form {
-
-    input {
-        background-color: #000;
-        color: #fff;
-        font-size: 20px;
-    }
-    textarea {
-        background-color: #000;
-        color: #fff;
-        font-size: 20px;        
-        resize: none;
-    }
+  input {
+    background-color: #000;
+    color: #fff;
+    font-size: 20px;
+  }
+  textarea {
+    background-color: #000;
+    color: #fff;
+    font-size: 20px;
+    resize: none;
+  }
 }
 
 li {
-    display: inline;
-    list-style: none;
+  display: inline;
+  list-style: none;
 }
 
 a {
-    text-decoration: none;
+  color: $main-color;
+  text-decoration: none;
 }
 
 a,
 p {
-    font-family: $content-font;
+  font-family: $content-font;
 }

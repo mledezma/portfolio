@@ -3,16 +3,22 @@ const sass = require('gulp-sass');
 const browserSync = require('browser-sync').create();
 const imagemin = require('gulp-imagemin');
 const pug = require('gulp-pug');
-const autoprefixer = require('gulp-autoprefixer');
+const autoprefixer = require('autoprefixer');
 const sourcemaps = require('gulp-sourcemaps');
+const postcss = require('gulp-postcss');
+const cssnano = require('cssnano');
+const del = require('del');
+const runSequence = require('run-sequence');
 
 gulp.task('sass', function () {
-    return gulp.src('app/sass/**/*.scss') // Gets all files ending with .scss in app/scss
+    var plugins = [
+        autoprefixer({browsers: ['last 2 version']}),
+        cssnano()
+    ];
+    return gulp.src('app/sass/**/style.scss') // Gets all files ending with .scss in app/scss
         .pipe(sourcemaps.init())
         .pipe(sass())
-        .pipe(autoprefixer({
-			browsers: ['last 2 versions']
-        }))
+        .pipe(postcss(plugins))
         .pipe(sourcemaps.write())
         .pipe(gulp.dest('./css'))
         .pipe(browserSync.stream())
@@ -44,9 +50,20 @@ gulp.task('js', function(){
     .pipe(gulp.dest('./js'))
 });
 
+gulp.task('clean:img', function() {
+    return del.sync('img');
+})
+
 gulp.task('images', function () {
-    return gulp.src('app/img/**/*.+(png|jpg|jpeg|gif|svg)')
+    runSequence('clean:img', 
+    function() {
+        return gulp.src('app/img/**/*.+(png|jpg|jpeg|gif|svg)')
         .pipe(gulp.dest('./img'))
+    })
 });
 
-gulp.task('build', ['sass', 'images', 'pug', 'js', 'watch']);
+gulp.task('build', function() {
+    runSequence('clean:img', 
+    ['sass', 'images', 'pug', 'js', 'watch'])
+    
+});

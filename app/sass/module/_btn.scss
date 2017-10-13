@@ -1,7 +1,13 @@
 .btn {
     border: 1px solid $main-color;
+    border-radius: 15px;
     display: block;
-    margin: 18px auto;
+    margin: 30px auto;
     padding: 15px 40px;
     width: 25%;
+}
+
+.btn:hover {
+    background-color: $main-color;
+    color: #000;
 }

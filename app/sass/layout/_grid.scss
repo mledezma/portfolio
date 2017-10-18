@@ -8,8 +8,11 @@
 }
 
 .flex-layout {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-around;
-    align-items: flex-end;
+    // display: flex;
+    // flex-flow: row wrap;
+    // justify-content: space-around;
+    // align-items: flex-end;
+    // width: 1280px;
+    overflow-x: scroll;
+    overflow-y: hidden;
 }

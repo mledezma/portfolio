@@ -1,5 +1,6 @@
 .proyect {
     display: inline-block;
+    flex-shrink: 0;
     margin-right: 6%;
     width: 28%;
 
@@ -10,11 +11,11 @@
 }
 
 .proyect:first-child {
-    padding-bottom: 10%;
+    padding-bottom: 7%;
 }
 
 .proyect:nth-child(2) {
-    padding-bottom: 15%;
+    padding-bottom: 13%;
 }
 
 .proyect:nth-child(3) {

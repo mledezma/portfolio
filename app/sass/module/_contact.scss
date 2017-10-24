@@ -1,0 +1,26 @@
+.contact {
+
+    p {
+        margin: 0 auto 70px;
+        text-align: center;
+        width: 40%;
+    } 
+      
+    input, textarea {
+        border: none;
+        border-bottom: 1px solid #fff;
+        display: block;
+        margin-bottom: 50px;
+        padding-bottom: 20px;
+        width: 100%;
+    }
+
+    ::placeholder {
+        color: #fff;
+    }
+
+    form {
+        margin: 0 auto;
+        width: 70%;
+    }
+}

@@ -85,12 +85,14 @@ li {
   list-style: none;
 }
 
-a {
+a,
+button {
   color: $main-color;
   text-decoration: none;
 }
 
 a,
-p {
+p,
+button {
   font-family: $content-font;
 }

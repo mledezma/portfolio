@@ -9,13 +9,15 @@ const postcss = require('gulp-postcss');
 const cssnano = require('cssnano');
 const del = require('del');
 const runSequence = require('run-sequence');
+const uglify = require('gulp-uglify');
 
 gulp.task('sass', function () {
     var plugins = [
         autoprefixer({browsers: ['last 2 version']}),
         cssnano()
     ];
-    return gulp.src('app/sass/**/style.scss') // Gets all files ending with .scss in app/scss
+
+    return gulp.src('app/sass/*.scss') // Gets all files ending with .scss in app/scss
         .pipe(sourcemaps.init())
         .pipe(sass())
         .pipe(postcss(plugins))
@@ -47,7 +49,8 @@ gulp.task('watch', ['sass', 'pug'], function () {
 
 gulp.task('js', function(){
     return gulp.src('app/js/**/*.js')
-    .pipe(gulp.dest('./js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('./js')) 
 });
 
 gulp.task('clean:img', function() {
@@ -65,5 +68,4 @@ gulp.task('images', function () {
 gulp.task('build', function() {
     runSequence('clean:img', 
     ['sass', 'images', 'pug', 'js', 'watch'])
-    
 });

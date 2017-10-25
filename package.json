@@ -9,16 +9,18 @@
   "author": "Marco Ledezma Cordero <marcoledezmacordero09@gmail.com>",
   "license": "ISC",
   "devDependencies": {
-    "autoprefixer": "^7.1.5",
+    "autoprefixer": "^7.1.6",
     "browser-sync": "^2.18.13",
     "cssnano": "^3.10.0",
     "del": "^3.0.0",
     "gulp": "^3.9.1",
-    "gulp-imagemin": "^3.3.0",
+    "gulp-imagemin": "^3.4.0",
     "gulp-postcss": "^7.0.0",
     "gulp-pug": "^3.3.0",
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.6.1",
+    "gulp-uglify": "^3.0.0",
+    "pump": "^1.0.2",
     "run-sequence": "^2.2.0"
   }
 }

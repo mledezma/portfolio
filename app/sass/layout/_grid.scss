@@ -12,20 +12,29 @@
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-around;
-    // overflow-x: scroll;    
-    // overflow-y: hidden;
-    overflow: hidden;
-    padding-left: 19%;
-    position: relative;
     width: 100%;
 }
 
-.flex-layout::after {
-    background-color: rgba( #000000, 0.5);
-    content: "";
-    height: 100%;
-    position: absolute;
-    right: -1;
-    top: 0;
-    width: 19%;
+.proyects-wrapper {
+    position: relative;
+
+    &:before,
+    &:after {
+        background-color: rgba(0, 0, 0, .5);
+        content: '';
+        height: 100%;
+        position: absolute;
+        width: 23%;
+        z-index: 99;
+    }    
+
+    &:before {
+        left: 0;                
+        top: 0;
+    }
+
+    &:after {
+        top: 0;
+        right: 0;
+    }  
 }

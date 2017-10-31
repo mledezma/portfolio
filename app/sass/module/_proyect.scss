@@ -1,8 +1,6 @@
 .proyect {
-    display: inline-block;
-    flex-shrink: 0;
+    flex: 0 0 20%;
     margin-right: 6%;
-    width: 28%;
 
     p {
         margin-top: 20px;
@@ -11,6 +9,7 @@
 }
 
 .proyect:first-child {
+    margin-left: 78%;
     padding-bottom: 7%;
 }
 

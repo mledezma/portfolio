@@ -65,7 +65,12 @@ gulp.task('images', function () {
     })
 });
 
+gulp.task('fonts', function () {
+    return gulp.src('app/fonts/**/*.+(ttf|otf|svg)')
+    .pipe(gulp.dest('./fonts'))
+});
+
 gulp.task('build', function() {
     runSequence('clean:img', 
-    ['sass', 'images', 'pug', 'js', 'watch'])
+        ['sass', 'images', 'pug', 'js', 'fonts', 'watch'])
 });

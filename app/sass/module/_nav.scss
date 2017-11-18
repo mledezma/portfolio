@@ -3,7 +3,7 @@
 
     nav {
         float: right;
-        padding: 2.2% 0px;
+        padding: 3% 0px;
     }
 
     li {
@@ -18,11 +18,5 @@
 
     a:hover {
         color: $main-color;
-    }
-
-    .logo {
-        background-color: $main-color;
-        height: 75px;
-        width: 205px;
     }
 }

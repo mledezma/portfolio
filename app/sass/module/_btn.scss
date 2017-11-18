@@ -2,15 +2,49 @@
     background-color: transparent;
     border: 1px solid $main-color;
     border-radius: 15px;
+    color: $main-color;
+    cursor: pointer;
     display: block;
     font-size: 16px;
-    margin: 30px auto;
     padding: 15px 40px;
     text-align: center;
-    width: 25%;    
+
+    &:hover {
+        background-color: $main-color;
+        color: #000;
+    }
 }
 
-.btn:hover {
+.btn-inverse {
     background-color: $main-color;
+    border: 1px solid $main-color;
+    border-radius: 15px;
     color: #000;
+    cursor: pointer;
+    display: block;
+    font-size: 16px;
+    padding: 15px 40px;
+    text-align: center;
+
+    &:hover {
+        background-color: transparent;
+        color: $main-color;
+    }
+}
+
+.btn-after,
+.btn-before {
+    display: inline;
+    position: absolute;
+    top: 50%;
+}
+
+.btn-before {
+    left: 10%;
+    z-index: 100;
+}
+
+.btn-after {
+    right: 10%;
+    z-index: 100;
 }

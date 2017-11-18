@@ -11,17 +11,19 @@
     align-items: flex-end;
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-around;
     width: 100%;
 }
 
-.proyects-wrapper {
+.proyects {
+    padding: 40px 0;
     position: relative;
+    overflow: hidden;
 
     &:before,
     &:after {
-        background-color: rgba(0, 0, 0, .5);
+        background-color: rgba(0, 0, 0, .7);
         content: '';
+        cursor: pointer;
         height: 100%;
         position: absolute;
         width: 23%;
@@ -37,4 +39,8 @@
         top: 0;
         right: 0;
     }  
+}
+
+.contact {
+    padding: 40px 0;
 }

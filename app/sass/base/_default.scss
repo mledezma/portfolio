@@ -93,6 +93,12 @@ button {
 
 a,
 p,
-button {
+button,
+div {
   font-family: $content-font;
+}
+
+@font-face {
+  font-family: 'Calligraffitti-Regular';
+  src: url('../fonts/Calligraffitti-Regular.ttf');
 }

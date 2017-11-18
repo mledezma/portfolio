@@ -10,7 +10,7 @@
 			};
 		});
 	};
-
+	
 	var init = function () {
 		textareaResize();	
 	};

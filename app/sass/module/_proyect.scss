@@ -9,7 +9,7 @@
 }
 
 .proyect:first-child {
-    margin-left: 78%;
+    margin-left: 24%;
     padding-bottom: 7%;
 }
 
@@ -19,4 +19,16 @@
 
 .proyect:nth-child(3) {
     padding-bottom: 8%;
+}
+
+.proyect-link {
+    margin: 30px auto;
+}
+
+.btn-more {
+    margin: 30px auto;
+}
+
+.proyects-wrapper {
+    position: relative;
 }

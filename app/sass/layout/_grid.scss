@@ -21,12 +21,12 @@
 
     &:before,
     &:after {
-        background-color: rgba(0, 0, 0, .7);
+        background-color: rgba(0, 0, 0, .9);
         content: '';
         cursor: pointer;
         height: 100%;
         position: absolute;
-        width: 23%;
+        width: 18%;
         z-index: 99;
     }    
 

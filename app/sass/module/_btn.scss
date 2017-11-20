@@ -40,11 +40,13 @@
 }
 
 .btn-before {
-    left: 10%;
+    left: 0;
+    margin-left: 5.5%;
     z-index: 100;
 }
 
 .btn-after {
-    right: 10%;
+    margin-right: 5%;
+    right: 0;
     z-index: 100;
 }

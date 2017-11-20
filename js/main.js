@@ -53,7 +53,7 @@
 			if (mouseX < centerX && isScrolling && window.innerWidth-firstChild.offsetWidth*2 >= val) {
 				firstChild.style.marginLeft = val + 'px';
 				val += (centerX - mouseX)/150;
-			} else if (mouseX > centerX && isScrolling && -(window.innerWidth-firstChild.offsetWidth*2) <= val + firstChild.offsetWidth) {				
+			} else if (mouseX > centerX && isScrolling && -(window.innerWidth-firstChild.offsetWidth*2) <= val+firstChild.offsetWidth*2) {				
 				firstChild.style.marginLeft = val + 'px';
 				val -= (mouseX-centerX)/150;
 			}

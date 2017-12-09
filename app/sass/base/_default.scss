@@ -102,3 +102,13 @@ div {
   font-family: 'Calligraffitti-Regular';
   src: url('../fonts/Calligraffitti-Regular.ttf');
 }
+
+p::selection,
+h2::selection,
+span::selection {
+  background: $main-color;
+}
+
+a::selection {
+  background: #ccc;
+}

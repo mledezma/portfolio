@@ -28,7 +28,7 @@
 			btn.innerHTML = '';
 			btn.appendChild(pauseIcon);
 			btn.appendChild(stopText);
-		}
+		};
 
 		proyectsBtn.forEach(function(btn) {
 			var btnText = btn.innerText;
@@ -49,7 +49,7 @@
 			mouseX = event.clientX;		
 		});
 
-		var interval = setInterval(function() {
+		setInterval(function() {
 			if (mouseX < centerX && isScrolling && window.innerWidth-firstChild.offsetWidth*2 >= val) {
 				firstChild.style.marginLeft = val + 'px';
 				val += (centerX - mouseX)/150;
@@ -58,11 +58,21 @@
 				val -= (mouseX-centerX)/150;
 			}
 		}, 10);
-	}
+	};
+
+	var mediaQueries = function () {
+		console.log('mediaQueries happens');
+		document.addEventListener('resize', function() {
+			console.log('Resize happens');
+			if (window.matchMedia('(min-width: 1024px)').matches) {
+				proyectsScroll();
+			}
+		});
+	};
 
 	var init = function () {
 		textareaResize();
-		proyectsScroll();
+		mediaQueries();
 	};
 
 	window.app = {
@@ -71,4 +81,6 @@
 
 }(window));
 
-window.app.init();
+window.addEventListener('load', function () {
+	window.app.init();
+});

@@ -13,6 +13,23 @@
         outline: none;
         padding-bottom: 20px;
         width: 100%;
+
+        &:active,
+        &:focus {
+            border-bottom: 1px solid $main-color;  
+        }
+    }
+
+    input:active::placeholder,
+    input:focus::placeholder {
+        color: $main-color;
+        font-size: 20px;
+    }
+
+    textarea:active::placeholder,
+    textarea:focus::placeholder {
+        color: $main-color;
+        font-size: 20px;
     }
 
     ::placeholder {
@@ -26,5 +43,9 @@
 
     textarea {
         overflow: hidden;    
+    }
+
+    button[type="submit"] {
+        margin: 0 auto;
     }
 }

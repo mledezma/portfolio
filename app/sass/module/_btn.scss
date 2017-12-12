@@ -34,9 +34,13 @@
 
 .btn-after,
 .btn-before {
-    display: inline;
+    display: none;
     position: absolute;
     top: 50%;
+    
+    @media screen and (min-width:1024px) {
+        display: inline;
+    }
 }
 
 .btn-before {

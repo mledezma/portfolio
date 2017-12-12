@@ -8,26 +8,41 @@
 }
 
 .flex-layout {
-    align-items: flex-end;
+    align-items: center;
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: column wrap;
     width: 100%;
+
+    @media screen and (min-width:1024px) {
+        align-items: flex-end;
+        display: flex;
+        flex-flow: row nowrap;
+    }
 }
 
 .proyects {
-    padding: 40px 0;
+    padding: 40px 20px;
     position: relative;
     overflow: hidden;
+
+    @media screen and (min-width:1024px) {
+        padding: 40px 0;
+    }
 
     &:before,
     &:after {
         background-color: rgba(0, 0, 0, .9);
         content: '';
         cursor: pointer;
+        display: none;
         height: 100%;
         position: absolute;
         width: 18%;
         z-index: 99;
+
+        @media screen and (min-width:1024px) {
+            display: block;
+        }
     }    
 
     &:before {

@@ -1,25 +1,37 @@
 .about {
-    background-image: url('../img/intro_landscape.jpg');
-    background-repeat: no-repeat;
-    background-size: contain;
+    background:
+    linear-gradient(135deg, #000 22px, $main-color 22px, $main-color 24px, transparent 24px, transparent 67px, $main-color 67px, $main-color 69px, transparent 69px),
+    linear-gradient(225deg, #000 22px, $main-color 22px, $main-color 24px, transparent 24px, transparent 67px, $main-color 67px, $main-color 69px, transparent 69px)0 64px;
+    background-color:#000;
+    background-size: 64px 128px;
     min-height: 570px;
     padding: $main-space 0;
     position: relative;
 }
 
 .about-info {    
-    @include background-opacity($main-color, 0.57);  
+    background-color: $main-color;
     box-sizing: border-box;
     border-radius: 50%;
     color: #000000;
-    height: 412px;
+    height: 300px;
     left: 50%;
-    margin: -206px 0 0 -206px;
+    margin: -206px 0 0 -150px;
     padding: 5% 3%;
     position: absolute;
     text-align: center;
     top: 50%;
-    width: 412px;
+    width: 300px;
+
+    @media screen and (min-width:425px){
+        height: 320px;        
+        width: 320px;        
+    }
+    @media screen and (min-width:920px){      
+        height: 412px;    
+        margin: -206px 0 0 -206px;        
+        width: 412px;        
+    }
 
     h2 {
         margin-bottom: $main-space;

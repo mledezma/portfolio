@@ -36,3 +36,10 @@
     background: $main-color;
   }
 }
+
+.break-line {
+  display: block;
+  @media screen and (min-width: 425px){
+    display: none;    
+  }
+}

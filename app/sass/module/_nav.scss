@@ -1,9 +1,17 @@
 .menu {
     background-color: #fff;
+    text-align: center;
+    
+    @media screen and (min-width:526px){
+        text-align: initial;
+    }
 
     nav {
-        float: right;
         padding: 3% 0px;
+
+        @media screen and (min-width:526px){
+            float: right;
+        }
     }
 
     li {
